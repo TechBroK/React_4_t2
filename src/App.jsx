@@ -27,7 +27,7 @@ export default function App() {
   return (
     <TicketProvider>
       <NotificationProvider>
-        <BrowserRouter>
+        <BrowserRouter basename="/React_4_t2">
           <div className="app">
             <Header />
 

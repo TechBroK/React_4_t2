@@ -1,13 +1,13 @@
 {
- "homepage": "https://TechBroK.github.io/React_4_t2/",
+ "homepage": "https://techbrok.github.io/React_4_t2/",
  "name": "hngi13-t2",
  "private": true,
  "version": "0.0.0",
  "type": "module",
  "scripts": {
   "dev": "vite",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist",
   "build": "vite build",
   "lint": "eslint .",
   "preview": "vite preview"
