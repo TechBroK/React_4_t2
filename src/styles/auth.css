@@ -1,0 +1,77 @@
+/* Basic auth page styles used by Login and Signup */
+.auth-page {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 430px;
+  background: #96a5d5;
+  border: 1px solid rgba(255,255,255,0.04);
+  padding: 1.6rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.auth-card h2 {
+  margin: 0 0 0.25rem 0;
+  font: bold;
+}
+
+.auth-card label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+}
+
+.auth-card input {
+  margin-top: 0.4rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(149, 170, 235, 0.79);
+  background: rgb(243, 240, 240);
+  color: inherit;
+}
+
+.field-error {
+  color: #ff0000;
+  font-size: 0.85rem;
+  margin-top: 0.35rem;
+}
+
+.auth-error {
+  background: rgba(255,50,50,0.08);
+  color: #ffb4b4;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+}
+
+.auth-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  align-items: center;
+}
+
+.btn {
+  padding: 0.55rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  color:black;
+}
+
+/* .btn.primary {
+  background: linear-gradient(90deg,#5b8def,#5be5d3);
+  color: #04263b;
+  font-weight: 600;
+} */
+
+

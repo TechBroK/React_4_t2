@@ -1,0 +1,48 @@
+# Node dependencies
+node_modules/
+
+# Vite / build outputs
+dist/
+build/
+out/
+
+# Local env files
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs and editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Coverage and caches
+coverage/
+.cache/
+
+# Misc
+*.log
+*.tgz
+*.zip
+
+# Storybook
+.storybook/
+
+# Ignore local env for secrets if present
+.localstack/
+
+# Keep lockfiles in repo (package-lock.json, yarn.lock) by default

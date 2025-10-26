@@ -1,0 +1,72 @@
+.ticket-table-wrap { margin-top: 1rem; overflow: auto; }
+.ticket-table { width: 100%; border-collapse: collapse; min-width: 800px; }
+.ticket-table thead th { text-align: left; padding: 14px 12px; border-bottom: 1px solid #dbeef8; font-weight: 600; color: #0f172a; background: #e9f7ff }
+.ticket-table tbody td { padding: 12px 10px; border-bottom: 1px solid #f3f4f6; vertical-align: middle }
+.ticket-table tbody tr:nth-child(odd) { background: #ffffff }
+.ticket-table tbody tr:nth-child(even) { background: #eaf6ff } /* light skyblue */
+.ticket-row:hover { background: #fff8e6 }
+.muted { color: #6b7280 }
+.desc-cell { color: #374151 }
+
+.badge { display: inline-block; padding: 4px 8px; border-radius: 999px; font-size: 0.85rem; }
+.badge.priority.low { background: #ecfccb; color: #365314 }
+.badge.priority.medium { background: #fff7ed; color: #7c2d12 }
+.badge.priority.high { background: #fee2e2; color: #7f1d1d }
+.badge.status.open { background: #ecfdf5; color: #065f46 } /* green tone */
+.badge.status.in_progress { background: #fff7ed; color: #92400e } /* amber tone */
+.badge.status.closed { background: #f3f4f6; color: #374151 } /* gray tone */
+
+.btn.small { padding: 6px 8px; font-size: 0.85rem }
+.btn.ghost.small { background: transparent }
+
+.ticket-edit-row td { background: #fafafa }
+
+.complete-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 34px;
+	height: 34px;
+	border-radius: 999px;
+	background: #16a34a; /* green */
+	color: #fff;
+	border: none;
+	font-weight: 700;
+	cursor: pointer;
+}
+.complete-icon[disabled] { opacity: 0.7; cursor: default }
+
+/* Ticket detail page styles */
+.page-ticket { background: #fff; border-radius: 12px; padding: 0; box-shadow: 0 6px 20px rgba(15,23,42,0.06); overflow: hidden; margin-top: 1rem }
+.page-ticket .ticket-card-header { display:flex; justify-content:space-between; align-items:center; padding: 1rem 1.25rem; gap: 12px }
+.page-ticket .ticket-title { margin: 0; font-size: 1.6rem; color: #0f172a }
+.page-ticket .ticket-meta { margin-top: 6px }
+.page-ticket .ticket-card-body { padding: 1rem 1.25rem 1.5rem }
+.ticket-desc { color: #374151; line-height: 1.6 }
+
+/* left accent per status */
+.page-ticket.open { border-left: 6px solid #0369a1; margin-top: 70px;} /* blue */
+.page-ticket.resolved { border-left: 6px solid #16a34a } /* green */
+
+/* subtle header background per status */
+.page-ticket.open .ticket-card-header { background: linear-gradient(90deg, rgba(3,105,161,0.06), transparent) }
+.page-ticket.resolved .ticket-card-header { background: linear-gradient(90deg, rgba(22,163,74,0.06), transparent) }
+
+.ticket-form { display:flex; flex-direction:column; gap:0.5rem; }
+.ticket-form .field { display:flex; flex-direction:column; gap:0.35rem }
+.ticket-form label { font-size: 0.9rem; color: #374151 }
+.ticket-form input, .ticket-form textarea, .ticket-form select { padding:0.7rem; border-radius:8px; border:1px solid #d1d5db; background: #fff; color:inherit; box-shadow: 0 1px 2px rgba(15,23,42,0.03) }
+.ticket-form button { align-self:flex-start; padding:0.6rem 1rem; border-radius:8px; }
+
+.stats { display: flex; gap: 1rem; flex-wrap: wrap; }
+.card, .ticket-card { background: #ffffff; padding: 1.2rem; border-radius: 12px; box-shadow: 0 6px 18px rgba(2,6,23,0.06); }
+.stat-card { background: #ffffff; padding: 1rem 1.25rem; border-radius:10px; min-width:140px; text-align:center; border: 1px solid #e6eef9 }
+.stat-card strong { display:block; font-size:1.25rem; margin-top:8px; color:#0f172a }
+
+/* Prominent search input */
+.dashboard-controls { display:flex; gap:12px; align-items:center; margin-bottom: 12px }
+.search-input { width:100%; padding:14px 18px; border-radius:12px; border:1px solid #cbd5e1; box-shadow: 0 6px 20px rgba(2,6,23,0.04); font-size:1rem }
+.search-input:focus { outline: none; box-shadow: 0 8px 30px rgba(14,165,233,0.14); border-color: #0ea5e9 }
+.status-select { padding:10px 12px; border-radius:10px; border:1px solid #d1d5db }
+
+.field-error { color: #ef4444; font-size: 0.85rem; margin-top: 0.35rem; }

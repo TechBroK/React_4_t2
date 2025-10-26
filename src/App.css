@@ -1,0 +1,55 @@
+:root{
+	--max-width: 1440px;
+	--bg: linear-gradient(180deg,#071124 0%, #0b1220 100%);
+	--card: rgba(255,255,255,0.03);
+	--muted: #9aa6bf;
+	--accent: #0ea5e9;
+	--glass: rgba(255,255,255,0.02);
+}
+
+/* container is defined globally in src/index.css to keep a single source of truth */
+
+/* landing hero */
+.landing .hero{
+	position: relative;
+	padding: 6rem 0 3rem;
+	background: var(--bg);
+	overflow: hidden;
+}
+
+.hero-wave{position:absolute;left:0;right:0;top:0;height:160px;width:100%;display:block;pointer-events:none}
+
+.hero-inner{display:flex;gap:2rem;align-items:center;justify-content:space-between}
+.hero-content{flex:1;min-width:220px}
+.hero-title{font-size:3rem;margin:0;color:var(--text, #e6eef8)}
+.hero-sub{color:var(--muted);margin-top:0.6rem}
+
+.hero-ctas{margin-top:1.25rem;display:flex;gap:0.75rem}
+.btn.primary{background:var(--accent);color:#04263b;font-weight:700}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text)}
+
+.hero-decor{width:420px;max-width:40%;position:relative}
+.hero-decor .circle{position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;background:rgba(14,165,233,0.08);box-shadow:0 8px 24px rgba(2,6,23,0.6)}
+.hero-decor .circle.large{transform:rotate(12deg)}
+
+.feature-boxes{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:5rem}
+.feature-boxes .box{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,0.6);color:var(--text)}
+
+/* Footer */
+.site-footer{border-top:1px solid rgba(255,255,255,0.03);padding:1.25rem 0;margin-top:2rem}
+.footer-inner{display:flex;gap:1rem;align-items:center;justify-content:space-between}
+.footer-nav a{margin:0 0.5rem;color:var(--muted);text-decoration:none}
+.brand{font-weight:700}
+
+/* Responsive */
+@media (max-width: 900px){
+	.hero-inner{flex-direction:column;align-items:flex-start}
+	.hero-decor{width:100%;max-width:none}
+	.feature-boxes{grid-template-columns:repeat(2,1fr);margin-top:1.5rem}
+}
+@media (max-width: 560px){
+	.hero-title{font-size:2rem}
+	.feature-boxes{grid-template-columns:1fr}
+	.hero-decor .circle{display:none}
+}
+
