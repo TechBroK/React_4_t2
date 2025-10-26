@@ -53,8 +53,8 @@ html, body, #root {
 }
 
 .hero-content {
-  flex: 0 1 900px; /* don't grow too wide; allow shrinking on small screens */
-  max-width: 900px;
+  flex: 0 1; /* don't grow too wide; allow shrinking on small screens */
+  max-width: 90px;
   z-index: 2;
   /* make content a vertical flex column and center children */
   display: flex;
@@ -271,7 +271,7 @@ html, body, #root {
     flex-direction: column;
     text-align: center;
   }
-
+ 
   .feature-boxes {
     align-items: center;
   }

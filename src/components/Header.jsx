@@ -39,7 +39,16 @@ export default function Header() {
           <span className="hamburger" aria-hidden="true"></span>
         </button>
 
-        <nav id="main-nav" className={`main-nav ${menuOpen ? 'open' : ''}`} aria-label="Main navigation">
+        <nav
+          id="main-nav"
+          className={`main-nav ${menuOpen ? 'open' : ''}`}
+          aria-label="Main navigation"
+          onClick={(e) => {
+            // close mobile menu when a link or button inside the nav is clicked
+            const target = e.target.closest && e.target.closest('a,button')
+            if (target) setMenuOpen(false)
+          }}
+        >
           <ul className="nav-list">
             <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
             <li><Link to="/dashboard" onClick={() => setMenuOpen(false)}>Tickets</Link></li>
@@ -56,6 +65,7 @@ export default function Header() {
             )}
           </div>
         </nav>
+        {menuOpen && <div className="nav-backdrop" onClick={() => setMenuOpen(false)} aria-hidden />}
       </div>
     </header>
   )
