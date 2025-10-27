@@ -1,16 +1,12 @@
-// Simple mock authentication service using localStorage
-const USERS_KEY = 'tf_users'
-// use the required session key name for the app
-const TOKEN_KEY = 'ticketapp_session'
-const USER_KEY = 'ticketapp_user'
 
-// Simple synchronous "hash" for demo purposes (base64). Not secure — this is a demo only.
+const USERS_KEY = 'tf_users'
+const TOKEN_KEY = 'ticketapp_session'
+const USER_KEY = 'ticketapp_user'
 function _hashPassword(password) {
   if (!password) return ''
   try {
     return btoa(password)
-  } catch {
-    // older envs
+  } catch {
     return String(password)
   }
 }
@@ -34,8 +30,7 @@ function _saveSession(user) {
   return { token, user }
 }
 
-export async function signup({ name, email, password }) {
-  // simulate network latency
+export async function signup({ name, email, password }) {
   await new Promise((r) => setTimeout(r, 200))
   const users = _readUsers()
   if (users.find((u) => u.email === email)) {

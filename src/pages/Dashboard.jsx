@@ -52,9 +52,10 @@ export default function Dashboard() {
         </div>
         <div>
           <select className="status-select" value={filterStatus} onChange={(e) => setFilterStatus(e.target.value)}>
-            <option>All</option>
-            <option>Open</option>
-            <option>Resolved</option>
+            <option value="All">All</option>
+            <option value="open">Open</option>
+            <option value="in_progress">In Progress</option>
+            <option value="closed">Closed</option>
           </select>
         </div>
       </div>

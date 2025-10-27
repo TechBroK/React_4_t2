@@ -13,12 +13,12 @@ import Header from './components/Header'
 import './styles/tickets.css'
 
 export default function App() {
-  // small protected wrapper for routes that require authentication
+
   function Protected({ children }) {
     const location = useLocation()
-    // show a helpful message when redirecting due to missing auth
+
     if (!auth.isAuthenticated()) {
-      // cannot use hooks conditionally here; use NotificationProvider consumer via a small wrapper component
+
       return <Navigate to="/auth/login" state={{ from: location }} replace />
     }
     return children

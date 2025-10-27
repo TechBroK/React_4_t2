@@ -1,4 +1,4 @@
-// Minimal mock API for tickets. Replace with real HTTP calls as needed.
+
 
 const delay = (ms = 200) => new Promise((r) => setTimeout(r, ms))
 

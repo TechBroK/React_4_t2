@@ -46,7 +46,7 @@ export default function TicketItem({ ticket, index }) {
           <div style={{display: 'flex', gap: 8, alignItems: 'center'}}>
             <button onClick={() => setEditing(true)} className="btn small">Edit</button>
             <button onClick={handleDelete} className="btn ghost small">Delete</button>
-            {/* Completed / History action: show green tick to mark completed */}
+            {}
             {ticket.status !== 'closed' && (
               <button
                 className="complete-icon"

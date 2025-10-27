@@ -20,7 +20,7 @@ export default function Header() {
       <div className="container header-inner">
         <div className="brand">
           <Link to="/" className="no-deco-link brand-link" aria-label="TicketFlow home">
-            {/* small inline SVG logo for crisp scaling */}
+            {}
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <rect x="2" y="6" width="20" height="12" rx="2" fill="#0ea5e9" />
               <path d="M6 9h6v6H6z" fill="#04263b" />
@@ -43,8 +43,7 @@ export default function Header() {
           id="main-nav"
           className={`main-nav ${menuOpen ? 'open' : ''}`}
           aria-label="Main navigation"
-          onClick={(e) => {
-            // close mobile menu when a link or button inside the nav is clicked
+          onClick={(e) => {
             const target = e.target.closest && e.target.closest('a,button')
             if (target) setMenuOpen(false)
           }}

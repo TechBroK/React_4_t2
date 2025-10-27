@@ -1,4 +1,4 @@
-/* Basic auth page styles used by Login and Signup */
+
 .auth-page {
   min-height: calc(100vh - 80px);
   display: flex;
@@ -68,10 +68,6 @@
   color:black;
 }
 
-/* .btn.primary {
-  background: linear-gradient(90deg,#5b8def,#5be5d3);
-  color: #04263b;
-  font-weight: 600;
-} */
+
 
 

@@ -10,11 +10,9 @@ export default function TicketForm({ onSubmit, initial = {}, submitLabel = 'Save
   const validate = () => {
     const e = {}
     if (!title.trim()) e.title = 'Title is required'
-    if (!description.trim()) e.description = 'Description is required'
-    // status must be one of allowed values
+    if (!description.trim()) e.description = 'Description is required'
     const allowed = ['open', 'in_progress', 'closed']
-    if (!status || !allowed.includes(status)) e.status = 'Please select a valid status'
-    // optional validations
+    if (!status || !allowed.includes(status)) e.status = 'Please select a valid status'
     if (description && description.length > 1000) e.description = 'Description is too long (max 1000 chars)'
     const prios = ['Low', 'Medium', 'High']
     if (priority && !prios.includes(priority)) e.priority = 'Invalid priority'
@@ -26,8 +24,7 @@ export default function TicketForm({ onSubmit, initial = {}, submitLabel = 'Save
     const eobj = validate()
     setErrors(eobj)
     if (Object.keys(eobj).length) return
-  onSubmit?.({ title: title.trim(), description: description.trim(), priority, status })
-    // only clear for create mode (no initial.title)
+  onSubmit?.({ title: title.trim(), description: description.trim(), priority, status })
     if (!initial.title) {
       setTitle('')
       setDescription('')
@@ -49,24 +46,26 @@ export default function TicketForm({ onSubmit, initial = {}, submitLabel = 'Save
         {errors.description && <div className="field-error">{errors.description}</div>}
       </div>
 
-      <div className="field">
-        <label htmlFor="tf-priority">Priority</label>
-        <select id="tf-priority" value={priority} onChange={(e) => setPriority(e.target.value)}>
-          <option>Low</option>
-          <option>Medium</option>
-          <option>High</option>
-        </select>
-        {errors.priority && <div className="field-error">{errors.priority}</div>}
-      </div>
+      <div className="row two-cols">
+        <div className="field">
+          <label htmlFor="tf-priority">Priority</label>
+          <select id="tf-priority" value={priority} onChange={(e) => setPriority(e.target.value)}>
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+          </select>
+          {errors.priority && <div className="field-error">{errors.priority}</div>}
+        </div>
 
-      <div className="field">
-        <label htmlFor="tf-status">Status</label>
-        <select id="tf-status" value={status} onChange={(e) => setStatus(e.target.value)}>
-          <option value="open">Open</option>
-          <option value="in_progress">In Progress</option>
-          <option value="closed">Closed</option>
-        </select>
-        {errors.status && <div className="field-error">{errors.status}</div>}
+        <div className="field">
+          <label htmlFor="tf-status">Status</label>
+          <select id="tf-status" value={status} onChange={(e) => setStatus(e.target.value)}>
+            <option value="open">Open</option>
+            <option value="in_progress">In Progress</option>
+            <option value="closed">Closed</option>
+          </select>
+          {errors.status && <div className="field-error">{errors.status}</div>}
+        </div>
       </div>
 
       <div className="field">

@@ -51,11 +51,11 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-/* small utilities used by components */
+
 .no-deco-link { color: inherit; text-decoration: none; }
 .page-pad { padding: 2rem; }
 
-/* global container used across pages */
+
 .container {
   max-width: 1440px;
   margin: 0 auto;

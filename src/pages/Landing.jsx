@@ -20,21 +20,20 @@ export default function Landing() {
 				})
 			}, { threshold: 0.15 })
 			io.observe(el)
-		} else {
-			// fallback: simply show
+		} else {
 			el.classList.add('is-visible')
 		}
 
-		return () => { /* cleanup handled by observer unobserve */ }
+		return () => {  }
 	}, [])
 	return (
 		<>
 			<main className="landing">
 				<section className="hero">
-					{/* Decorative Circle */}
+					{}
 					<div className="circle large" aria-hidden="true"></div>
 
-					{/* Hero Content */}
+					{}
 					<div className="container hero-inner">
 						<div className="hero-content">
 							<h1 className="hero-title">TicketFlow</h1>
@@ -57,10 +56,10 @@ export default function Landing() {
 							</div>
 						</div>
 
-						{/* hero-decor left intentionally minimal - feature boxes moved to their own section below */}
+						{}
 					</div>
 
-					{/* Wave Decoration */}
+					{}
 					<svg
 						className="hero-wave"
 						viewBox="0 0 1440 320"
@@ -74,7 +73,7 @@ export default function Landing() {
 					</svg>
 				</section>
 
-				{/* Decorative boxes moved out as their own full-width section */}
+				{}
 				<section className="decor-cards">
 					<div className="container">
 						<div ref={boxesRef} className="feature-boxes centered" id="decorFeatureBoxes">
@@ -85,7 +84,7 @@ export default function Landing() {
 					</div>
 				</section>
 
-				{/* Features Section */}
+				{}
 				<section className="features">
 					<div className="container">
 						<h2>Why Choose TicketFlow?</h2>

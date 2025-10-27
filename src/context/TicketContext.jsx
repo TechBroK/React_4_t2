@@ -14,18 +14,14 @@ export function TicketProvider({ children }) {
     try {
       const raw = localStorage.getItem(STORAGE_KEY)
       if (raw) return JSON.parse(raw)
-    } catch (e) {
-      // ignore parse errors and fall back to mock
+    } catch (e) {
     }
     return initialMock
-  })
-
-  // persist tickets to localStorage whenever they change
+  })
   useEffect(() => {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(tickets))
-    } catch (e) {
-      // fail silently (storage might be full or denied)
+    } catch (e) {
     }
   }, [tickets])
 
@@ -40,12 +36,10 @@ export function TicketProvider({ children }) {
   const updateTicket = (id, patch) => {
     let updated = null
     setTickets((s) => s.map((t) => {
-      if (t.id === id) {
-        // sanitize status if present
+      if (t.id === id) {
         const allowed = ['open', 'in_progress', 'closed']
         const next = { ...t, ...patch }
-        if (patch.status && !allowed.includes(patch.status)) {
-          // ignore invalid status changes
+        if (patch.status && !allowed.includes(patch.status)) {
           return t
         }
         updated = next
