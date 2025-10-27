@@ -20,7 +20,8 @@ export default function Landing() {
 				})
 			}, { threshold: 0.15 })
 			io.observe(el)
-		} else {
+		} else {
+
 			el.classList.add('is-visible')
 		}
 

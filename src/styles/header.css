@@ -1,6 +1,7 @@
 
 .site-header {
-  background: linear-gradient(180deg, rgba(20, 43, 146, 0.941), transparent);
+  background: #006898;
+color: white;
   border-bottom: 1px solid rgba(0,0,0,0.06);
   position: sticky;
   top: 0;
@@ -93,7 +94,7 @@
 
 
 @media (max-width: 720px) {
-  .main-nav { background: linear-gradient(180deg, rgba(4,46,68,0.98), rgba(4,46,68,0.95)); color: #e6eef8 }
+  .main-nav { background: linear-gradient(18deg, rgba(4,46,68,0.98), rgba(4,46,68,0.95)); color: #e6eef8 }
   .nav-list a { color: #e6eef8 }
   .btn-link { color: #e6eef8 }
   .site-header .btn.ghost { border-color: rgba(255,255,255,0.18); color: #e6eef8 }
