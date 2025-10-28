@@ -78,9 +78,12 @@ export default function Landing() {
 				<section className="decor-cards">
 					<div className="container">
 						<div ref={boxesRef} className="feature-boxes centered" id="decorFeatureBoxes">
-							<div className="box">🎫 Create &amp; assign tickets</div>
-							<div className="box">📊 Prioritize &amp; track progress</div>
-							<div className="box">🤝 Collaborate with your team</div>
+							<div className="card">
+								<h3>🎫 Create &amp; assign tickets</h3>
+								<p>Quickly create tickets and assign work to your team.</p>
+							</div>
+							<div className=" card"><h3>📊 Prioritize &amp; track progress</h3><p>Sort and prioritize tasks to focus on what matters.</p></div>
+							<div className="card"><h3>🤝 Collaborate with your team</h3><p>Protected routes and secure sessions keep your data safe.</p></div>
 						</div>
 					</div>
 				</section>
